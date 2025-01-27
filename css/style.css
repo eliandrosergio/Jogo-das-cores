@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Root */
+
+:root {
+    --clr-dark: #000;
+    --clr-white: #fff;
+    --clr-r: rgb(255, 36, 175);
+    --clr-g: rgb(175, 255, 36);
+    --clr-b: rgb(36, 175, 255);
+    --clr-rb: var(--clr-r), var(--clr-b);
+    --clr-transparent: rgba(0, 0, 0, 0);
+    --clr-dark-translucid: rgba(0, 0, 0, 0.4);
+    --clr-white-translucid: rgba(255, 255, 255, 0.4);
+}
+
+/* Normal */
+
+body {
+    font-size: 16px;
+    font-family: "Montserrat", "Avenir", monospace;
+    background: linear-gradient(to left, var(--clr-rb));
+}
+
+/* ID */
+
+#cabeca {
+    padding: 14px;
+    text-align: center;
+    color: var(--clr-g);
+    background-color: var(--clr-dark-translucid);
+}
+
+#bottom {
+    margin: 14px;
+    text-align: center;
+}
+
+#bottom p {
+    font-size: 28px;
+    font-style: italic;
+    -webkit-text-stroke-width: 0.8px;
+    -webkit-text-stroke-color: var(--clr-g);
+    -webkit-text-fill-color: var(--clr-transparent);
+}
+
+/* Class */
+
+.corAtual {
+    font-size: 200%;
+    text-transform: uppercase;
+}
+
+.mensagem {
+    width: 20%;
+    display: inline-block;
+}
+
+.divButton {
+    height: 40px;
+    text-align: center;
+    color: var(--clr-dark);
+    background-color: var(--clr-white-translucid); 
+
+}
+
+.divButton button {
+    height: 100%;
+    padding: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    font-weight: 700;
+    font-size: inherit;
+    letter-spacing: 1px;
+    color: var(--clr-r);
+    transition: all 0.4s;
+    text-transform: uppercase;
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+}
+
+.divButton button:hover {
+    color: var(--clr-b);
+    background-color: var(--clr-dark-translucid); 
+}
+
+.divButton button.selecionado {
+    color: var(--clr-b);
+    background-color: var(--clr-dark-translucid);
+}
+
+.divQuadrados {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.quadrados {
+    display: flex;
+    flex-direction: row;
+}
+
+.quadrado {
+    width: 30%;
+    margin: 2%;
+    cursor: pointer;
+    border-radius: 14%;
+    padding-bottom: 30%;
+    background-color: var(--clr-g);
+    border: 2px solid var(--clr-dark);
+}
